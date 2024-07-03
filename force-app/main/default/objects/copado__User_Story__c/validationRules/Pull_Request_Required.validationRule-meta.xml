@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pull_Request_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>(
+(ISCHANGED(copado__Promote_Change__c) &amp;&amp; copado__Promote_Change__c = true) ||
+(ISCHANGED( copado__Promote_and_Deploy__c ) &amp;&amp; copado__Promote_and_Deploy__c = true)
+)
+&amp;&amp;
+copado__Has_Apex_Code__c &amp;&amp; 
+Pull_Request_Approved__c = 0</errorConditionFormula>
+    <errorMessage>Pull Request Approval is Required to Apex User Stories</errorMessage>
+</ValidationRule>

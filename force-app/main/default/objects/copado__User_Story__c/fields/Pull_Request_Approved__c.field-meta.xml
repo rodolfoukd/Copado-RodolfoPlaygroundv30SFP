@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pull_Request_Approved__c</fullName>
+    <externalId>false</externalId>
+    <label>Pull Request Approved</label>
+    <summaryFilterItems>
+        <field>copado__Pull_Request__c.Approved__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>copado__Pull_Request__c.copado__User_Story__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>
